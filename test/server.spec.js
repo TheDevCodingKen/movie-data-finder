@@ -22,7 +22,7 @@ function withMovie(i) {
       movieData[i] = null;
       return [200, movie];
     }
-    
+
     return [500];
   }
 }
@@ -72,7 +72,7 @@ describe("server module", function() {
         done();
     })
   });
-  
+
   it("GET /?t=baby%20driver responds with movie data", (done) => {
 	  chai.request(app)
       .get('/?t=baby%20driver')
@@ -94,7 +94,7 @@ describe("server module", function() {
         done();
     })
   });
-  
+
   it("Third GET /?t=baby%20driver responds with movie data, without hitting OMDb", (done) => {
 	  chai.request(app)
       .get('/?t=baby%20driver')
